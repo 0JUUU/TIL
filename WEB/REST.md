@@ -13,11 +13,11 @@
 ⏩ <span style="color:red">자원(resource)의 표현(representation)</span>에 의한 <span style="color:red">상태 전달</span>
 
  	1. 자원의 표현
-     - 자원 : 해당 소프트웨어가 관리하는 모~든 것 (e.g. 문서, 그림, 데이터, 소프트웨어 자체, ...)
-     - 자원의 표현 : 그 자원을 표현하기 위한 이름 (e.g. DB의 학생 정보가 자원 → 'students' 표현)
-	2. 상태(정보) 전달
-    - 데이터가 요청되어지는 시점에서 자원의 상태(정보) 전달
-    - JSON 혹은 XML 을 통해 데이터를 주고 받는 것이 일반적
+ 	 - 자원 : 해당 소프트웨어가 관리하는 모~든 것 (e.g. 문서, 그림, 데이터, 소프트웨어 자체, ...)
+ 	 - 자원의 표현 : 그 자원을 표현하기 위한 이름 (e.g. DB의 학생 정보가 자원 → 'students' 표현)
+ 	2. 상태(정보) 전달
+ 	- 데이터가 요청되어지는 시점에서 자원의 상태(정보) 전달
+ 	- JSON 혹은 XML 을 통해 데이터를 주고 받는 것이 일반적
 
 ⇒ 하나의 URI는 하나의 고유한 리소스와 연결❗ 〰 화면에는 관심 없어❗
 
@@ -56,24 +56,28 @@ HTTP URI를 통해 제어할 자원(Resource) 명시하고, HTTP Method (GET, PO
 
    
 
-   ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/de65ab6c-15f9-4739-955b-8180df8d2a02/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/de65ab6c-15f9-4739-955b-8180df8d2a02/Untitled.png)
+   ![Untitled.png (1440×433)](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/de65ab6c-15f9-4739-955b-8180df8d2a02/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210719%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210719T150915Z&X-Amz-Expires=86400&X-Amz-Signature=0a18b864593e2226c8819f8bcc22b253579944d9886652ce2f18cd47b065a7d1&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
-   ⇒ GET과 POST만으로 자원에 대한 CRUD 처리 & URI 는 액션을 나타냄             
+   ⇒ GET과 POST만으로 자원에 대한 CRUD 처리		⇒ 4가지 method를 모두 사용하여 CRUD 처리 
 
-   ​                             
+    & URI 는 액션을 나타냄             									& URI는 제어하려는 자원을 뜻함
 
-   ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d47c314d-48fd-44af-8c5f-2efb3c7b4476/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d47c314d-48fd-44af-8c5f-2efb3c7b4476/Untitled.png)
+   
 
-   ⇒ 4가지 method를 모두 사용하여 CRUD 처리 & URI는 제어하려는 자원을 뜻함
+   ![Untitled.png (1440×433)](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d47c314d-48fd-44af-8c5f-2efb3c7b4476/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210719%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210719T150950Z&X-Amz-Expires=86400&X-Amz-Signature=2817f61537846bb00e651760042a3a4c900fd53360a81c8ee0fd16bf8d7ee545&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)                             
+
+   
+
+   
 
    
 
    #### REST 특징
 
    1. Server-Client(서버-클라이언트 구조)
-
+   
       - 자원이 있는 쪽이 Server, 자원을 요청하는 쪽이 Client
-
+   
         - REST Server : API를 제공하고 비즈니스 로직 처리 및 저장을 책임짐
         - Client : 사용자 인증 관련 일을 직접 관리하고 책임짐
 
@@ -82,7 +86,7 @@ HTTP URI를 통해 제어할 자원(Resource) 명시하고, HTTP Method (GET, PO
    2. Stateless (무상태)
 
       - HTTP 프로토콜 : Stateless Protocol ⇒ REST 역시 무상태성
-
+   
       - Client의 context를 서버에 저장 ❌ → 즉, 세션과 쿠키와 같은 context 정보를 신경 ❌ ⇒ 구현이 단순해짐
 
       - Server는 각각의 요청을 완전히 별개의 것으로 인식 & 처리
@@ -100,17 +104,17 @@ HTTP URI를 통해 제어할 자원(Resource) 명시하고, HTTP Method (GET, PO
       - 캐시 사용을 통해 응답시간이 빨라지고 REST Server 트랜잭션이 발생 ❌ → 전체 응답시간, 성능, 서버의 자원 이용률 향상 가능
 
    4. Layered System (계층화)
-
+   
       - Client는 REST API Server만 호출
-
+   
       - REST Server 는 다중 계층으로 구성
         - API Server는 순수 비즈니스 로직 수행 & 그 앞단에 보안, 로드밸런싱, 암호화, 사용자 인증 등을 추가하여 구조 상의 유연성을 줄 수 🙆‍♀️
         - 로드밸런싱, 공유 캐시 등을 통해 확장성 & 보안성 향상 가능
         - PROXY, 게이트웨이 같은 네트워크 기반의 중간 매체 사용 가능
-
+   
    5. Code-On-Demand(optional)
       - Server로부터 스크립트를 받아서 Client에서 실행
-
+   
    6. Uniform Interface (인터페이스 일관성)
       - URI로 지정한 Resource에 대한 조작 통일 & 한정적인 인터페이스로 수행
       - HTTP 표준 프로토콜에 따르는 모든 플랫폼에서 사용 가능
