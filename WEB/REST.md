@@ -58,9 +58,9 @@ HTTP URI를 통해 제어할 자원(Resource) 명시하고, HTTP Method (GET, PO
 
    ![Untitled.png (1440×433)](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/de65ab6c-15f9-4739-955b-8180df8d2a02/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210719%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210719T150915Z&X-Amz-Expires=86400&X-Amz-Signature=0a18b864593e2226c8819f8bcc22b253579944d9886652ce2f18cd47b065a7d1&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
-   ⇒ GET과 POST만으로 자원에 대한 CRUD 처리		⇒ 4가지 method를 모두 사용하여 CRUD 처리 
+   ⇒ GET과 POST만으로 자원에 대한 CRUD 처리&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp;             ⇒ 4가지 method를 모두 사용하여 CRUD 처리 
 
-    & URI 는 액션을 나타냄             									& URI는 제어하려는 자원을 뜻함
+    & URI 는 액션을 나타냄        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;       & URI는 제어하려는 자원을 뜻함
 
    
 
